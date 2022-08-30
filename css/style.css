@@ -1,0 +1,327 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+/*--Меняет отсчёт ширины блока для более удобной вёрстки--*/
+*,
+*::before,
+*::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*--Убирает линии обводки у некоторых браузеров--*/
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+
+/*--Делает теги блочными--*/
+header,
+nav,
+aside,
+footer {
+  display: block;
+}
+
+/*--Параметры, которые уравнивают поведение шрифтов и элементов для разных браузеров--*/
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/*--Наследование семейства шрифта тегами формы(по умолчанию не наследуют)--*/
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+/*--Данные параметры убирают некоторые особенности в разных браузерах--*/
+input::-ms-clear {
+  display: none;
+}
+button {
+  background: transparent;
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+
+/*--Обнуление заголовков--*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/********************/
+:root {
+  --bg-body: #f5f5f5;
+  --bg-wrapper: #f7f7f7;
+  --bs-wrapper: #807f7f;
+  --bg-main: #bed5f6;
+  --tbs-color: #ff3;
+  --text-color: #000;
+  --bg-viber: #7360f2;
+  --bg-telega: #08c;
+  --bg-watsapp: #25d366;
+  
+}
+/********************/
+body {
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: var(--tbs-color);
+}
+.wrapper {
+  flex-direction: column;
+  padding: 10px;
+  margin: 0 auto;
+  max-width: 25em;
+  border-radius: 15px;
+  box-shadow: 0 4px 30px 0 var(--bs-wrapper);
+}
+[class*="_container"] {
+  margin: 0 auto;
+  max-width: 23.75em;
+}
+.flex {
+  display: flex;
+}
+/********************/
+
+/**header************/
+.header {
+}
+.header__container {
+  overflow: hidden;
+  border-radius: 15px 15px 0 0;
+  background: linear-gradient(0deg, rgba(70, 89, 156, 0.32), rgba(70, 89, 156,0.32)), url("../img/header__image.png") 50% / cover no-repeat;
+}
+.header__content {
+  flex-direction: column;
+  padding: 50px 25px 60px;
+}
+.header__title-box {
+  align-items: center;
+}
+.header__title {
+  margin: 0 0.625em 0.833em 0;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+.header__icon {
+  margin-top: -0.75em;
+}
+.header__descr {
+  line-height: 1.19;
+}
+
+/**main**************/
+.main {
+  border-radius: 0 0 15px 15px;
+  background-color: var(--bg-main);
+}
+
+/**section-resume*****/
+.resume {
+  margin-bottom: 3em;
+}
+.resume__container {
+}
+.resume__body {
+  flex-direction: column;
+}
+.resume__avatar {
+  align-items: center;
+  padding: 0 0.625rem;
+  margin: -1.875em 0 1.5em;
+}
+.avatar {
+}
+.avatar__photo {
+  flex: 0 0 110px;
+  overflow: hidden;
+  background: transparent;
+  border: 4px solid var(--tbs-color) ;
+  border-radius: 50%;
+}
+.avatar__photo img {
+  width: 100%;
+}
+.avatar__info {
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding-top: 0.75rem;
+  margin-left: 1.25em;
+}
+.avatar__name {
+  margin-bottom: 0.3125em;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.2;
+  color: var(--text-color);
+  text-shadow: 0 1px 4px var(--tbs-color);
+}
+.avatar__descr {
+  font-size: 0.875rem;
+  line-height: 1.2;
+  color: #6a6a6a;
+  text-shadow: 0 1px 4px var(--tbs-color);
+}
+.resume__button-descr {
+  flex-direction: column;
+  padding: 0 1.875rem;
+}
+.resume__button {
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.625rem 4rem;
+  margin-bottom: 2.5em;
+  font-size: 1rem;
+  line-height: 1;
+  border-radius: 8px;
+  background: var(--text-color);
+  cursor: pointer;
+}
+.button {
+}
+.button__icon {
+}
+.button__span {
+  margin-left: 10px;
+  color: #fff;
+}
+.resume__descr-group {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5em;
+}
+.resume__descr {
+  line-height: 1.25;
+  color: var(--text-color);
+  text-shadow: 0 1px 4px var(--tbs-color);
+}
+.resume__descr-icon {
+  margin-top: -5px;
+}
+.resume__button-hh {
+  justify-content: center;
+  padding: 1.25rem 4rem;
+  font-size: 1rem;
+  line-height: 1;
+  border-radius: 8px;
+  background: #e1011c;
+  color: #fff;
+}
+
+/**section-contacts***/
+.contacts__body {
+  flex-direction: column;
+  align-items: center;
+  padding: 0.625rem;
+}
+.contacts__image {
+  margin-bottom: 1.25em;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.contacts__image img {
+  width: 100%;
+}
+.contacts__buttons {
+  flex-direction: column;
+  align-items: center;
+}
+.contacts__title {
+  margin-bottom: 10px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--text-color);
+  text-shadow: 0 1px 4px var(--tbs-color);
+}
+.contacts__list {
+  align-items: center;
+}
+.contacts__list-item {
+  flex-direction: column;
+  align-items: center;
+  margin-right: 24px;
+}
+.contacts__list-item:last-child {
+  margin: 0;
+}
+.contacts__link-pointer {
+  width: 35px;
+  height: 40px;
+  margin-bottom: 0.375em;
+}
+.contacs__link {
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+.viber {
+  background: var(--bg-viber);
+}
+.telega{
+  background: var(--bg-telega);
+}
+.watsapp{
+  background: var(--bg-watsapp);
+}
+.contacts__link-icon {
+  width: 40px;
+  height: 40px;
+}
+@media (max-width: 350px) {
+  .header__title-box {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .resume__button {
+    padding: 0.625rem 2rem;
+  }
+  .contacts__list {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contacts__list-item {
+    margin: 0 0 0.5em 0;
+  }
+}
